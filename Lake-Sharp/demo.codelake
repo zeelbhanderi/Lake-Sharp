@@ -1,0 +1,25 @@
+addwater("Enter First Number ")
+MADEWATER userEnterFirstNumber = inpwt_int()
+addwater("Enter Second Number")
+MADEWATER userEnterSecondNumber = inpwt_int()
+addwater("")
+
+
+
+
+addwater("--> Addition        ( Press : 1)")
+addwater("--> Subtraction     ( Press : 2)")
+addwater("--> Multiplication  ( Press : 3)")
+addwater("--> Division        ( Press : 4)")
+
+
+MADEWATER userEnterChosse = inpwt()
+addwater("")
+
+
+MADEWATER soluwution = (IF userEnterChosse == "1" INOUTWATER  (userEnterFirstNumber + userEnterSecondNumber) EWIF userEnterChosse == "2" INOUTWATER (userEnterFirstNumber - userEnterSecondNumber) EWIF userEnterChosse == "3" INOUTWATER (userEnterFirstNumber * userEnterSecondNumber) EWIF userEnterChosse == "4" INOUTWATER (userEnterFirstNumber / userEnterSecondNumber) EWSE "Invavid inpuwut, only inpuwut a nuwumber fwom 1 to 4 MADEWATER^^")
+
+
+addwater("")
+addwater("The Answer is:")
+addwater(soluwution)
