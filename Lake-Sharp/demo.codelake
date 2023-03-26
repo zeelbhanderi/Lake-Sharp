@@ -1,25 +1,31 @@
-addwater("Enter First Number ")
-MADEWATER userEnterFirstNumber = inpwt_int()
-addwater("Enter Second Number")
-MADEWATER userEnterSecondNumber = inpwt_int()
-addwater("")
+# This is a very useful piece of software
 
+FUN oopify(prefix) -> prefix + "oop"
 
+FUN join(elements, separator)
+	VAR result = ""
+	VAR len = LEN(elements)
 
+	FOR i = 0 TO len THEN
+		VAR result = result + elements/i
+		IF i != len - 1 THEN VAR result = result + separator
+	END
 
-addwater("--> Addition        ( Press : 1)")
-addwater("--> Subtraction     ( Press : 2)")
-addwater("--> Multiplication  ( Press : 3)")
-addwater("--> Division        ( Press : 4)")
+	RETURN result
+END
 
+FUN map(elements, func)
+	VAR new_elements = []
 
-MADEWATER userEnterChosse = inpwt()
-addwater("")
+	FOR i = 0 TO LEN(elements) THEN
+		APPEND(new_elements, func(elements/i))
+	END
 
+	RETURN new_elements
+END
 
-MADEWATER soluwution = (IF userEnterChosse == "1" INOUTWATER  (userEnterFirstNumber + userEnterSecondNumber) EWIF userEnterChosse == "2" INOUTWATER (userEnterFirstNumber - userEnterSecondNumber) EWIF userEnterChosse == "3" INOUTWATER (userEnterFirstNumber * userEnterSecondNumber) EWIF userEnterChosse == "4" INOUTWATER (userEnterFirstNumber / userEnterSecondNumber) EWSE "Invavid inpuwut, only inpuwut a nuwumber fwom 1 to 4 MADEWATER^^")
+addWater("Greetings universe!")
 
-
-addwater("")
-addwater("The Answer is:")
-addwater(soluwution)
+FOR i = 0 TO 5 THEN
+	addWater(join(map(["l", "sp"], oopify), ", "))
+END
